@@ -13,40 +13,40 @@
 <body>
     <div class="container">
         <h1>Tax Calculator</h1>
-        <form id="taxForm">
+        <form id="taxForm" class="was-validated">
             <div class="form-group">
-                <label for="grossIncome">Enter Gross Annual Income <span class="tooltip" data-tooltip="Your total salary in a year before any deductions"><i class="bi bi-question-circle-fill"></i></span></label>
-
-                <input type="number" id="grossIncome" class="form-control" placeholder="Enter gross annual income">
-                <span class="error-icon" id="grossIncomeError"></span>
+                <label for="grossIncome">Enter Gross Annual Income</label>
+                <span class="icon" data-bs-toggle="tooltip" title="Gross annual income is your total salary in a year before any deduction"><i class="bi bi-question-circle"></i></span>
+                <input type="number" id="grossIncome" class="form-control" placeholder="Enter gross annual income" data-bs-toggle="tooltip" title="Add number only" required>
             </div>
             <div class="form-group">
                 <label for="extraIncome">Enter Extra Income</label>
-                <input type="number" id="extraIncome" class="form-control" placeholder="Enter extra income">
-                <span class="error-icon" id="extraIncomeError"></span>
+                <span class="icon" data-bs-toggle="tooltip" title="Extra income refers to money earned beyond regular wages or salary"><i class="bi bi-question-circle"></i></span>
+                <input type="number" id="extraIncome" class="form-control" placeholder="Enter extra income" data-bs-toggle="tooltip" title="Add number only" required>
             </div>
             <div class="form-group">
                 <label for="age">Enter Age Group</label>
+                <span class="icon" data-bs-toggle="tooltip" title="Age group refers to a categorized range of ages in which your age is fall"><i class="bi bi-question-circle"></i></span>
                 <select id="age" class="form-control">
                     <option value="<40">&lt; 40</option>
                     <option value=">=40&<60">&ge; 40 &lt; 60</option>
                     <option value=">=60">&ge; 60</option>
                 </select>
-                <span class="error-icon" id="ageError"></span>
             </div>
             <div class="form-group">
                 <label for="deductions">Enter Total Applicable Deductions</label>
-                <input type="number" id="deductions" class="form-control" placeholder="Enter total applicable deductions">
-                <span class="error-icon" id="deductionsError"></span>
+                <span class="icon" data-bs-toggle="tooltip" title="combined amount subtracted from an individual's gross income to calculate taxable income, including expenses such as contributions to retirement accounts, medical expenses, and charitable donations"><i class="bi bi-question-circle"></i></span>
+                <input type="number" id="deductions" class="form-control" placeholder="Enter total applicable deductions" data-bs-toggle="tooltip" title="Add number only" required>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
     <div class="modal" id="resultModal">
-        <div class="modal-content">
+        <div class="modal-content result">
             <span class="close">&times;</span>
-            <h2>Tax Calculation Result</h2>
-            <p id="result"></p>
+            <h1>Your Overall Income will be</h1>
+            <h2 id="result"></h2>
+            <h3>after tex deduction</h3>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -54,6 +54,7 @@
     <script src="script.js"></script>
 </body>
 </html>
+
 
 
 

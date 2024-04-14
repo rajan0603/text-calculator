@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             const result = totalIncome - tax;
-            document.getElementById('result').innerText = `Your overall income after tax deduction will be: ${result} Lakhs`;
+            document.getElementById('result').innerText = `${Number(result)}`;
             document.getElementById('resultModal').style.display = 'block';
         }
     });
