@@ -1,0 +1,19 @@
+{
+    "name": "tax-calculator",
+    "version": "1.0.0",
+    "description": "A simple tax calculator web application",
+    "main": "index.js",
+    "scripts": {
+        "start": "echo 'No server-side code to start'"
+    },
+    "keywords": [
+        "tax",
+        "calculator",
+        "web application"
+    ],
+    "author": "Your Name",
+    "license": "MIT",
+    "dependencies": {
+        "bootstrap-icons": "^1.11.3"
+    }
+}
